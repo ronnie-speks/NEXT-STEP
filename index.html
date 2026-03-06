@@ -1,144 +1,607 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Next Step Career Guidance & Counseling Services</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+<title>NextStep Career Guidance and Counselling Centre</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f0f8ff;
+line-height:1.6;
+color:#333;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* ================= HEADER ================= */
+
+header{
+background:#fff;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:75px;
+}
+
+.logo{
+width:80px;
+border-radius:10px;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav ul li a{
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#43a047;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.menu-toggle div{
+width:25px;
+height:3px;
+background:#333;
+}
+
+@media(max-width:768px){
+
+nav ul{
+display:none;
+position:absolute;
+top:75px;
+left:0;
+width:100%;
+background:#fff;
+flex-direction:column;
+text-align:center;
+}
+
+nav ul li{
+padding:15px 0;
+}
+
+nav.active ul{
+display:flex;
+}
+
+.menu-toggle{
+display:flex;
+}
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+background:url('images/nextstep.jpeg') center/cover no-repeat;
+height:520px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+position:relative;
+padding:20px;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,50,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:750px;
+animation:fadeUp 1.2s ease forwards;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero button{
+padding:13px 30px;
+border:none;
+border-radius:6px;
+font-size:1rem;
+cursor:pointer;
+transition:.3s;
+}
+
+.learn-btn{
+background:#1e88e5;
+color:white;
+}
+
+.learn-btn:hover{
+background:#1565c0;
+transform:scale(1.05);
+}
+
+.involve-btn{
+background:#43a047;
+color:white;
+}
+
+.involve-btn:hover{
+background:#2e7d32;
+transform:scale(1.05);
+}
+
+/* ================= HERO MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero{
+height:auto;
+padding:90px 20px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.hero button{
+width:200px;
+}
+
+}
+
+/* ================= SECTION ANIMATION ================= */
+
+.section-animate{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.section-animate.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= PROGRAMS ================= */
+
+.programs{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+background:white;
+border-radius:20px;
+}
+
+.programs h2{
+text-align:center;
+margin-bottom:50px;
+color:#1e88e5;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#fff;
+border-radius:10px;
+padding:25px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+text-align:center;
+transition:.3s;
+opacity:0;
+transform:translateY(30px);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.card i{
+font-size:45px;
+color:#43a047;
+margin-bottom:15px;
+transition:.3s;
+}
+
+.card:hover i{
+transform:scale(1.2) rotate(5deg);
+color:#1e88e5;
+}
+
+.card h3{
+margin-bottom:10px;
+color:#1e88e5;
+}
+
+.card p,
+.card ul{
+font-size:.95rem;
+color:#555;
+text-align:left;
+}
+
+.card ul{
+padding-left:18px;
+}
+
+/* ================= SPECIAL CARD ================= */
+
+.spec{
+border-top-left-radius:80px;
+border-bottom-right-radius:80px;
+}
+
+/* ================= ABOUT BOX ================= */
+
+.about{
+background:lightgreen;
+border-radius:10px;
+padding:10px;
+box-shadow:0 2px 15px rgba(0,0,0,.2);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#1e88e5;
+color:#fff;
+padding:40px 20px;
+margin-top:50px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:space-between;
+}
+
+.footer-section{
+flex:1 1 200px;
+}
+
+footer h3{
+margin-bottom:15px;
+color:#43a047;
+}
+
+footer a{
+display:block;
+margin-bottom:8px;
+}
+
+footer a:hover{
+color:#43a047;
+}
+
+footer p{
+font-size:.9rem;
+}
+
+.copyright{
+text-align:center;
+margin-top:25px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+</style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<!-- HEADER -->
 
-    <!-- Logo -->
-    <a href="#" class="text-xl font-bold text-blue-900">
-      Next Step
-    </a>
+<header>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-8 font-medium">
-      <li><a href="index.html" class="hover:text-blue-900">Home</a></li>
-      <li><a href="#" class="hover:text-blue-900">About</a></li>
-      <li><a href="#" class="hover:text-blue-900">Programs</a></li>
-      <li><a href="#" class="hover:text-blue-900">Contact</a></li>
-    </ul>
+<div class="container">
 
-    <!-- Desktop Button -->
-    <a href="#"
-       class="hidden md:inline-block px-5 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800 transition">
-      Get Involved
-    </a>
+<img src="images/logo.jpeg" class="logo">
 
-    <!-- Hamburger (Mobile Only) -->
-    <button id="menuBtn" class="md:hidden flex flex-col gap-1">
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
-    </button>
+<nav>
 
-  </div>
+<div class="menu-toggle" id="menu-toggle">
+<div></div>
+<div></div>
+<div></div>
+</div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t shadow-lg">
-    <ul class="flex flex-col p-6 space-y-6 font-semibold text-lg">
-      <li><a class="mobile-link" href="#">Home</a></li>
-      <li><a class="mobile-link" href="#">About</a></li>
-      <li><a class="mobile-link" href="#">Programs</a></li>
-      <li><a class="mobile-link" href="#">Contact</a></li>
-      <li>
-        <a href="#"
-           class="mobile-link block text-center px-4 py-3 bg-blue-900 text-white rounded-lg">
-          Get Involved
-        </a>
-      </li>
-    </ul>
-  </div>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#programs">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#">Leadership</a></li>
+<li><a href="#">Partners</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
 </nav>
 
+</div>
 
-<!-- ================= HERO ================= -->
-<section class="min-h-screen flex items-center justify-center pt-16 bg-blue-900 text-white text-center px-6">
+</header>
 
-  <div class="max-w-3xl">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-      Empowering Students to Discover Their Future
-    </h1>
+<!-- HERO -->
 
-    <p class="text-lg md:text-xl mb-8 text-white/90">
-      Supporting students in Northern Uganda to make informed
-      and confident career decisions through guidance and mentorship.
-    </p>
+<section class="hero" id="hero">
 
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#"
-         class="px-8 py-3 bg-white text-blue-900 rounded-lg font-semibold hover:bg-gray-200 transition">
-        Learn More
-      </a>
+<div class="hero-content">
 
-      <a href="#"
-         class="px-8 py-3 border-2 border-white rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">
-        Get Involved
-      </a>
-    </div>
-  </div>
+<h1>NextStep Career Guidance & Counselling Services</h1>
+
+<p>Empowering Students in Lango Sub-region to make informed career choices.</p>
+
+<div class="hero-buttons">
+
+<button class="learn-btn">Learn More</button>
+<button class="involve-btn">Get Involved</button>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- PROGRAMS -->
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-gray-900 text-gray-300 py-12">
+<section class="programs section-animate" id="programs">
 
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+<h2>About Us</h2>
 
-    <div>
-      <h3 class="text-white text-lg font-bold mb-4">Next Step</h3>
-      <p class="text-sm">
-        A volunteer-driven initiative empowering students
-        in Northern Uganda to make informed career decisions.
-      </p>
-    </div>
+<div class="cards">
 
-    <div>
-      <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
-      <ul class="space-y-3 text-sm">
-        <li><a href="#" class="hover:text-white">Home</a></li>
-        <li><a href="#" class="hover:text-white">About</a></li>
-        <li><a href="#" class="hover:text-white">Programs</a></li>
-        <li><a href="#" class="hover:text-white">Contact</a></li>
-      </ul>
-    </div>
+<div class="card">
 
-    <div>
-      <h3 class="text-white text-lg font-bold mb-4">Contact</h3>
-      <p class="text-sm">Email: info@nextstep.org</p>
-      <p class="text-sm mt-2">Northern Uganda</p>
-    </div>
+<i class="fas fa-book-open"></i>
 
-  </div>
+<h3>Our Background</h3>
 
-  <div class="text-center text-sm text-gray-500 mt-10 border-t border-gray-800 pt-6">
-    © 2026 Next Step Career Guidance & Counseling Services.
-  </div>
+<div class="about">
+
+<p>
+In the Lango sub-region of Uganda many students struggle to make informed decisions about their careers and professional paths. This results from limited exposure to diverse career options, lack of guidance in school and insufficient counselling support.
+</p>
+
+</div>
+
+</div>
+
+<div class="card spec">
+
+<i class="fas fa-bullseye"></i>
+
+<h3>Our Mission</h3>
+
+<p>
+To empower students in the Lango sub-region with career guidance mentorship and counselling services that enable them to make informed academic and career decisions.
+</p>
+
+</div>
+
+<div class="card spec">
+
+<i class="fas fa-eye"></i>
+
+<h3>Our Vision</h3>
+
+<p>
+A generation of students in Northern Uganda who are empowered confident and prepared to pursue fulfilling careers.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-list-check"></i>
+
+<h3>Key Objectives</h3>
+
+<ul>
+
+<li>Provide professional career guidance</li>
+<li>Equip students with knowledge about professions</li>
+<li>Reduce career indecision</li>
+<li>Build partnerships with institutions</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-container">
+
+<div class="footer-section">
+
+<h3>Next Step</h3>
+
+<p>
+Career Guidance and Counselling Services for students in the Lango sub-region Northern Uganda.
+</p>
+
+</div>
+
+<div class="footer-section">
+
+<h3>Quick Links</h3>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Programs</a>
+<a href="#">Leadership</a>
+<a href="#">Partners</a>
+<a href="#">Contact</a>
+
+</div>
+
+<div class="footer-section">
+
+<h3>Contact</h3>
+
+<p>Email: aburaemma96@gmail.com</p>
+<p>Phone: +256 783 471 624</p>
+
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 NextStep Career Guidance and Services
+</p>
+
 </footer>
 
-
-<!-- ================= SCRIPT ================= -->
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+/* MOBILE MENU */
+
+const menuToggle=document.getElementById("menu-toggle");
+const nav=document.querySelector("nav");
+
+menuToggle.addEventListener("click",()=>{
+nav.classList.toggle("active");
+});
+
+/* CLOSE MENU WHEN LINK CLICKED */
+
+document.querySelectorAll("nav a").forEach(link=>{
+link.addEventListener("click",()=>{
+nav.classList.remove("active");
+});
+});
+
+/* CARD ANIMATION */
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
+}
+});
+},{threshold:.2});
+
+cards.forEach(card=>{
+observer.observe(card);
+});
+
+/* SECTION ANIMATION */
+
+const sections=document.querySelectorAll(".section-animate");
+
+const sectionObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:.2});
+
+sections.forEach(section=>{
+sectionObserver.observe(section);
+});
+
 </script>
 
 </body>
