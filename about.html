@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Home | Next Step Career Guidance Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --green-dark: #0a5c2a;
+  --green-mid: #1a8a3a;
+  --green: #2db34a;
+  --green-light: #4dcc6a;
+  --blue-dark: #0d2e6e;
+  --blue-mid: #1a4eb5;
+  --blue: #2e6fd4;
+  --blue-light: #5a93e8;
+  --cream: #f0f7f2;
+  --warm-white: #f8fdf9;
+  --gold: #2e6fd4;       /* replace gold with logo blue */
+  --gold-light: #5a93e8; /* replace gold-light with light blue */
+  --charcoal: #0d1a12;
+  --text-mid: #1e4030;
+  --text-light: #4a7060;
+  --t: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--warm-white);
+    color:var(--charcoal);overflow-x:hidden;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:3px;}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:74px;
+    background: linear-gradient(135deg, rgba(10,92,42,0.96), rgba(13,46,110,0.96));
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(74,171,117,0.2);
+    transition:all .4s var(--t);
+}
+nav.scrolled{
+    height:62px;
+    background:rgba(13,61,42,0.99);
+    box-shadow:0 4px 40px rgba(0,0,0,.25);
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+.logo{
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;color:var(--green-dark);
+    font-weight:700;
+    box-shadow:0 0 20px rgba(232,160,32,.35);
+}
+.logo-text span:first-child{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    font-weight:600;
+    color:#fff;
+    line-height:1.1;
+}
+.logo-text span:last-child{
+    font-size:9px;
+    color:var(--gold-light);
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    list-style:none;
+}
+.nav-links a{
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    color:rgba(255,255,255,.75);
+    padding:8px 15px;
+    border-radius:6px;
+    letter-spacing:.4px;
+    transition:all .3s;
+    cursor:pointer;
+    position:relative;
+}
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    bottom:3px;
+    left:15px;
+    right:15px;
+    height:1.5px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transition:transform .3s var(--t);}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+.donate-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light))!important;color:var(--green-dark)!important;padding:10px 24px!important;border-radius:100px!important;font-weight:600!important;box-shadow:0 4px 18px rgba(232,160,32,.4);}
+.donate-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 30px rgba(232,160,32,.55)!important;
+}
+.donate-btn::after{
+    display:none!important;
+}
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:4px;
+}
+.hamburger span{
+    width:24px;
+    height:2px;
+    background:#fff;
+    display:block;
+    transition:all .3s;
+}
+
+/* HERO BG */
+.hero-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background: linear-gradient(155deg, rgba(13,61,42,0.85), rgba(13,61,42,0.85)),
+  url('images/me.jpeg') center/cover no-repeat;
+}
+
+
+/* PARTICLES */
+.particles{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+.particle{
+    position:absolute;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(232,160,32,.55),transparent);
+    animation:float-p linear infinite;
+}
+@keyframes float-p{
+    0%{
+        transform:translateY(100vh) scale(0);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    90%{
+        opacity:.4;
+    }
+    100%{
+        transform:translateY(-80px) scale(1);
+        opacity:0;}
+    }
+
+/* HERO */
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:0 24px;
+    max-width:880px;
+}
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(232,160,32,.15);
+    border:1px solid rgba(232,160,32,.4);
+    color:var(--gold-light);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    padding:8px 22px;
+    border-radius:100px;
+    margin-bottom:30px;
+    animation:fadeInDown .8s var(--t) forwards;
+}
+.hero-badge::before{
+    content:'';
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--gold);
+    animation:pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot{
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }50%{
+        opacity:.4;
+        transform:scale(.7);
+    }
+    }
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(48px,8vw,94px);
+    font-weight:300;
+    color:#fff;
+    line-height:1.05;
+    margin-bottom:8px;
+    animation:fadeInUp .9s .2s var(--t) both;
+}
+.hero h1 em{
+    font-style:italic;
+    color:var(--gold-light);
+}
+.hero-sub{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(20px,3vw,34px);
+    color:rgba(255,255,255,.65);
+    font-weight:300;
+    letter-spacing:1px;
+    margin-bottom:26px;
+    animation:fadeInUp .9s .35s var(--t) both;
+}
+.hero-desc{
+    font-size:16px;
+    color:rgba(255,255,255,.6);
+    line-height:1.85;
+    max-width:580px;
+    margin:0 auto 44px;
+    font-weight:300;
+    animation:fadeInUp .9s .5s var(--t) both;
+}
+.hero-cta{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+    animation:fadeInUp .9s .65s var(--t) both;
+}
+.btn-primary{
+    padding:15px 38px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    color:var(--green-dark);
+    border:none;
+    border-radius:100px;
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    cursor:pointer;
+    box-shadow:0 8px 28px rgba(232,160,32,.4);
+    transition:all .35s var(--t);
+}
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 38px rgba(232,160,32,.55);
+}
+.btn-ghost{
+    padding:14px 38px;
+    background:transparent;
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,.4);
+    border-radius:100px;
+    font-family:'DM Sans',sans-serif;
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:all .35s var(--t);
+}
+.btn-ghost:hover{
+    background:rgba(255,255,255,.1);
+    border-color:rgba(255,255,255,.7);
+    transform:translateY(-3px);
+}
+.scroll-indicator{
+    position:absolute;
+    bottom:36px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    animation:fadeInUp 1s 1s both;
+    cursor:pointer;
+}
+.scroll-indicator span{
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.35);
+}
+.scroll-arrow{
+    width:22px;
+    height:22px;
+    border-right:1.5px solid rgba(255,255,255,.35);
+    border-bottom:1.5px solid rgba(255,255,255,.35);
+    transform:rotate(45deg);
+    animation:bounce-arr 2s ease-in-out infinite;
+    margin-top:-6px;
+}
+@keyframes bounce-arr{
+    0%,100%{
+        transform:rotate(45deg) translateY(0);
+        opacity:.35;
+    }
+    50%{
+        transform:rotate(45deg) translateY(6px);
+        opacity:.8;
+    }
+}
+
+/* SERVICES */
+.services-strip{
+    background:var(--green-dark);
+    padding:80px 5%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1px;
+    position:relative;
+    z-index:2;
+}
+.service-item{
+    padding:44px 32px;
+    background:var(--green-dark);border:1px solid rgba(74,171,117,.12);
+    transition:all .4s var(--t);
+    position:relative;
+    overflow:hidden;
+    opacity:0;
+    transform:translateY(28px);
+}
+.service-item.visible{
+    animation:fadeInUp .7s var(--t) forwards;
+}
+.service-item::before{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(90deg,var(--gold),#2eb8a4);
+    transform:scaleX(0);
+    transition:transform .4s var(--t);
+    transform-origin:left;
+}
+.service-item:hover::before{
+    transform:scaleX(1);
+}
+.service-item:hover{
+    background:rgba(46,139,87,.12);
+}
+.service-icon{
+    width:50px;
+    height:50px;
+    background:rgba(232,160,32,.1);
+    border:1px solid rgba(232,160,32,.25);
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:18px;
+    transition:all .3s;
+}
+.service-item:hover .service-icon{
+    background:rgba(232,160,32,.2);
+    transform:scale(1.05) rotate(5deg);
+}
+.service-item h3{
+    font-family:'Cormorant Garamond',serif;font-size:21px;
+    color:#fff;
+    margin-bottom:10px;
+    font-weight:500;
+}
+.service-item p{
+    font-size:13.5px;
+    color:rgba(255,255,255,.5);
+    line-height:1.75;
+}
+
+/* IMPACT */
+.impact-wrap{
+    background:var(--warm-white);
+    padding:20px 0 0;
+}
+.impact-section{
+    max-width:1180px;
+    margin:0 auto;
+    padding:90px 5%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+.impact-text h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(34px,4vw,52px);
+    color:var(--green-dark);
+    line-height:1.15;
+    margin-bottom:22px;
+    font-weight:400;
+}
+.impact-text h2 em{
+    font-style:italic;
+    color:var(--green);
+}
+.impact-text p{
+    font-size:14.5px;
+    color:var(--text-mid);
+    line-height:1.85;
+    margin-bottom:16px;
+}
+.divider-gold{
+    width:56px;
+    height:2px;
+    background:linear-gradient(90deg, #2db34a, #2e6fd4);
+    margin-bottom:22px;
+}
+.stats-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+.stat-card{
+    background:var(--cream);
+    border-radius:16px;
+    padding:30px 24px;
+    border:1px solid rgba(46,139,87,.1);
+    transition:all .35s var(--t);
+    position:relative;
+    overflow:hidden;
+}
+.stat-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(180deg,var(--gold),var(--green));
+}
+.stat-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 36px rgba(13,61,42,.12);
+}
+.stat-number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:44px;
+    font-weight:600;
+    color:var(--green-dark);
+    line-height:1;
+    margin-bottom:6px;
+}
+.stat-label{
+    font-size:12.5px;
+    color:var(--text-light);
+}
+
+/* TESTIMONIAL */
+.testimonial-section{
+    background:linear-gradient(135deg,var(--green-dark),var(--green-mid));
+    padding:100px 5%;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+.testimonial-section::before{
+    content:'"';
+    position:absolute;
+    top:-30px;
+    left:4%;
+    font-family:'Cormorant Garamond',serif;
+    font-size:320px;
+    color:rgba(232,160,32,.06);
+    line-height:1;
+    pointer-events:none;
+}
+.testimonial-inner{
+    max-width:780px;
+    margin:0 auto;
+    position:relative;
+    z-index:1;
+}
+.testimonial-inner blockquote{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(22px,3vw,34px);
+    color:#fff;
+    font-weight:300;
+    font-style:italic;
+    line-height:1.65;
+    margin-bottom:30px;
+}
+.testimonial-author{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
+.author-avatar{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--green));display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;
+    color:#fff;
+    font-weight:600;
+}
+.author-info span:first-child{
+    display:block;
+    
+    font-size:14px;
+    font-weight:500;
+    color:#fff;
+}
+.author-info span:last-child{
+    font-size:11.5px;
+    color:var(--gold-light);
+    letter-spacing:.8px;
+}
+.testimonial-dots{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:32px;
+}
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.25);
+    cursor:pointer;
+    transition:all .3s;
+}
+.dot.active{
+    background:var(--gold);
+    width:24px;
+    border-radius:4px;
+}
+
+/* FOOTER */
+footer{
+    background: linear-gradient(135deg, #0a5c2a, #0d2e6e);
+    padding:70px 5% 34px;
+    position:relative;
+    overflow:hidden;}
+footer::before{content:'';
+position:absolute;
+top:0;left:0;
+right:0;
+height:1px;
+background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:44px;
+    margin-bottom:52px;
+}
+.footer-brand p{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    line-height:1.8;
+    margin:14px 0 22px;
+}
+.footer-socials{
+    display:flex;
+    gap:9px;
+}
+.footer-social-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    cursor:pointer;
+    transition:all .3s;
+    color:rgba(255,255,255,.55);
+    text-decoration:none;
+}
+.footer-social-btn:hover{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:var(--green-dark);
+}
+.footer-col h4{
+    font-size:10.5px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    margin-bottom:18px;
+    font-weight:500;
+}
+.footer-col ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+.footer-col ul li a{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    text-decoration:none;
+    transition:color .3s;
+    cursor:pointer;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding-top:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.footer-bottom p{
+    font-size:11.5px;
+    color:rgba(255,255,255,.3);
+}
+
+/* REVEAL */
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s var(--t),transform .7s var(--t);
+}
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(28px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:1024px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+}
+  .impact-section,.about-intro,.donate-content{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+}
+
+@media(max-width:768px){
+  nav{padding:0 4%;}
+  .nav-links{
+    display:none;
+}
+  .hamburger{
+    display:flex;
+}
+  .nav-links.open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:74px;left:0;
+    right:0;
+    background:rgba(13,61,42,.98);
+    padding:18px;
+    gap:4px;
+    border-bottom:1px solid rgba(232,160,32,.2);
+}
+  .hero h1{
+    font-size:42px;
+}
+  .services-strip{
+    grid-template-columns:1fr;
+}
+  .stats-grid,.values-grid,.amount-options{
+    grid-template-columns:1fr 1fr;
+}
+  .leaders-grid,.conduct-sections{
+    grid-template-columns:1fr;
+}
+  .conduct-nav{
+    position:static;
+}
+  .donate-form-card{
+    position:static;
+}
+  .mission-block,.pledge-block{
+    padding:36px 24px;
+}
+  .committee-block{
+    padding:36px 24px;
+}
+  .footer-grid{
+    grid-template-columns:1fr;
+}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:32px;}
+  .hero-cta{
+    flex-direction:column;
+    align-items:center;
+}
+  .stats-grid,.values-grid,.amount-options,.freq-toggle{
+    grid-template-columns:1fr;
+}
+  .page-hero{
+    height:320px;
+}
+  .conduct-article,.objectives-box{
+    padding:28px 20px;
+}
+  .donate-form-card{
+    padding:28px 20px;
+}
+  .footer-grid{
+    grid-template-columns:1fr;
+}
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="images/logo.jpeg" class="logo">
+    <div class="logo-text"><span>Next Step Initiative</span><span>Career Guidance & Counseling</span></div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+    <li><a href="donate.html" class="donate-btn"> Support Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="hero-bg" id="heroBg"></div>
+<div class="particles" id="particles"></div>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Lango Sub-Region, Uganda</div>
+    <h1>Your <em>Next Step</em><br>Starts Here</h1>
+    <p class="hero-sub">Career Guidance & Counseling Services Initiative</p>
+    <p class="hero-desc">Empowering students in primary and secondary schools across the Lango sub-region with the knowledge, skills, and professional guidance needed to make informed career choices and build purposeful futures.</p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="location.href='nextstep-about.html'">Discover Our Initiative</button>
+      <button class="btn-ghost" onclick="location.href='nextstep-donate.html'">Support Our Mission</button>
+    </div>
+  </div>
+  <div class="scroll-indicator" onclick="document.querySelector('.services-strip').scrollIntoView({behavior:'smooth'})">
+    <span>Explore</span><div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<div class="services-strip">
+  <div class="service-item">
+    <div class="service-icon">
+        <i class="fas fa-school"></i>
+    </div>
+    <h3>School Visits</h3>
+    <p>Structured career guidance sessions delivered directly to government-aided schools across the Lango sub-region.</p>
+</div>
+  <div class="service-item">
+    <div class="service-icon">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <h3>Career Counseling</h3>
+    <p>Individual and group counseling sessions helping students align their interests, abilities, and aspirations with the right career paths.</p>
+</div>
+  <div class="service-item">
+    <div class="service-icon">
+        <i class="fas fa-lightbulb"></i>
+    </div>
+    <h3>Interactive Workshops</h3>
+    <p>Engaging sessions where students explore diverse career options and develop essential professional skills for the future.</p>
+</div>
+  <div class="service-item">
+    <div class="service-icon">
+        <i class="fas fa-handshake"></i>
+    </div>
+    <h3>Professional Mentorship</h3>
+    <p>Connecting students with professionals from diverse fields for real-world insight and sustained mentorship.</p>
+</div>
+</div>
+
+<div class="impact-wrap">
+  <div class="impact-section">
+    <div class="impact-text reveal">
+      <div class="divider-gold"></div>
+      <h2>Bridging the Career <em>Guidance Gap</em> in Lango</h2>
+      <p>In the Lango sub-region of Uganda, many students struggle to make informed decisions about their future careers — often choosing paths that don't align with their skills, interests, or market demands.</p>
+      <p>The Next Step Initiative exists to close that gap. We connect students with professional guidance, mentorship, and practical resources so that every young person can take their next step with confidence and clarity.</p>
+      <button class="btn-primary" onclick="location.href='nextstep-about.html'" style="margin-top:12px;font-size:12.5px;padding:13px 30px;">Learn More</button>
+    </div>
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Professional Committee Members</div>
+    </div>
+      <div class="stat-card">
+        <div class="stat-number">P7–S6</div>
+        <div class="stat-label">Students Targeted</div>
+    </div>
+      <div class="stat-card">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Regions: Rural & Urban</div>
+    </div>
+      <div class="stat-card">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Futures Being Shaped</div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<section class="testimonial-section">
+  <div class="testimonial-inner">
+    <blockquote id="tText">"Before Next Step came to our school, I had no idea what I wanted to do after S6.
+         The guidance sessions opened my eyes to careers I never knew existed."</blockquote>
+    <div class="testimonial-author">
+      <div class="author-avatar" id="tAvatar">A</div>
+      <div class="author-info"><span id="tName">Akello Grace</span><span id="tTitle">S6 Student, Lango Sub-Region</span></div>
+    </div>
+    <div class="testimonial-dots">
+      <div class="dot active" onclick="setT(0)"></div>
+      <div class="dot" onclick="setT(1)"></div>
+      <div class="dot" onclick="setT(2)"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="images/logo.jpeg" class="logo">
+        <div class="logo-text">
+            <span>Next Step Initiative</span>
+            <span>Career Guidance & Counseling</span>
+        </div>
+    </div>
+      <p>Empowering students in the Lango sub-region of Uganda to make informed career 
+        choices and build purposeful futures through professional guidance and mentorship.</p>
+      <div class="footer-socials">
+        <div class="footer-social-btn">
+            <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="https://x.com/nextstep624" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="conduct.html">Conduct</a></li>
+      <li><a href="donate.html">Support Us</a></li>
+    </ul>
+</div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+      <li><a>School Visits</a></li><li><a>Career Counseling</a></li><li><a>Workshops</a></li><li><a>Mentorship</a></li><li><a>Partnerships</a></li>
+    </ul>
+</div>
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+      <li>
+        <a>
+            <i class="fas fa-map-marker-alt"></i>
+             Lango Sub-Region, Uganda
+            </a>
+        </li>
+      <li>
+        <a>
+            <i class="fas fa-phone"></i> 
+            +256 783 471 624
+        </a>
+    </li>
+      <li>
+        <a>
+            <i class="fas fa-envelope"></i>
+            nextstepug@gmail.com
+        </a>
+    </li>
+    <li>
+        <a>
+            <i class="fas fa-user"></i> 
+            Abura Emmanuel Gerald
+        </a>
+    </li>
+    </ul>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Next Step Career Guidance & Counseling Services Initiative. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  document.getElementById('heroBg').style.transform=`translateY(${y*.44}px)`;
+  document.getElementById('navbar').classList.toggle('scrolled',y>40);
+});
+
+(function(){const c=document.getElementById('particles');for(let i=0;i<16;i++){const p=document.createElement('div');p.className='particle';const s=Math.random()*6+2;p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*10}s;`;c.appendChild(p);}})();
+
+(function initReveal(){const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.transitionDelay=`${i*.07}s`;e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));})();
+
+(function initServices(){const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.animationDelay=`${i*.12}s`;e.target.classList.add('visible');}});},{threshold:.1});document.querySelectorAll('.service-item').forEach(el=>obs.observe(el));})();
+
+const testimonials=[
+  {text:'"Before Next Step came to our school, I had no idea what I wanted to do after S6. The guidance sessions opened my eyes to careers I never knew existed."',a:'A',n:'Akello Grace',t:'S6 Student, Lango Sub-Region'},
+  {text:'"The career counseling I received helped me understand that my love for numbers could lead to a career in engineering or finance. I am now pursuing my dream."',a:'O',n:'Okello Brian',t:'S4 Candidate, Government-Aided School'},
+  {text:'"Next Step did not just tell us about careers — they connected us with real professionals who showed us what those careers actually look like every day."',a:'A',n:'Atim Lydia',t:'P7 Graduate, Lango Sub-Region'}
+];
+let tIdx=0;
+function setT(i){
+  ['tText','tAvatar','tName','tTitle'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.opacity='0';});
+  setTimeout(()=>{
+    const t=testimonials[i];
+    document.getElementById('tText').textContent=t.text;
+    document.getElementById('tAvatar').textContent=t.a;
+    document.getElementById('tName').textContent=t.n;
+    document.getElementById('tTitle').textContent=t.t;
+    ['tText','tAvatar','tName','tTitle'].forEach(id=>{const el=document.getElementById(id);if(el){el.style.transition='opacity .5s';el.style.opacity='1';}});
+  },300);
+  document.querySelectorAll('.dot').forEach((d,di)=>d.classList.toggle('active',di===i));
+  tIdx=i;
+}
+setInterval(()=>setT((tIdx+1)%3),5000);
+</script>
+</body>
+</html>
