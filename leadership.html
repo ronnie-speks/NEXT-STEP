@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Meet the leadership team of Next Step Career Guidance Initiative empowering students in Uganda.">
+<meta name="keywords" content="career guidance Uganda, leadership team, student mentorship Uganda">
+<meta name="author" content="Next Step Initiative">
+<title>Leadership | Next Step Career Guidance Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+    --green-dark:#0d3d2a;
+    --green-mid:#1a5c3a;
+    --green:#2e8b57;
+    --cream:#f4f9f6;
+    --warm-white:#fafcfb;
+    --gold: #2e6fd4;       /* replace gold with logo blue */
+    --gold-light: #5a93e8;
+    --charcoal:#1e2a22;
+    --text-mid:#3d5045;
+    --text-light:#6b8070;
+    --t:cubic-bezier(.4,0,.2,1);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--warm-white);
+    color:var(--charcoal);
+    overflow-x:hidden;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--green);
+    border-radius:3px;
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:74px;
+    background: linear-gradient(135deg, rgba(10,92,42,0.96), rgba(13,46,110,0.96));
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(74,171,117,.2);
+    transition:all .4s;
+}
+nav.scrolled{
+    height:62px;
+    background:rgba(13,61,42,.99);
+    box-shadow:0 4px 40px rgba(0,0,0,.25);
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+.logo{
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;
+    color:var(--green-dark);
+    font-weight:700;
+}
+.logo-text span:first-child{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    font-weight:600;
+    color:#fff;
+    line-height:1.1;
+}
+.logo-text span:last-child{
+    font-size:9px;
+    color:var(--gold-light);
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    list-style:none;
+}
+.nav-links a{
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    color:rgba(255,255,255,.75);
+    padding:8px 15px;
+    border-radius:6px;
+    transition:all .3s;
+    position:relative;
+}
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    bottom:3px;
+    left:15px;
+    right:15px;
+    height:1.5px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transition:transform .3s;
+}
+.nav-links a:hover,.nav-links a.active{
+    color:#fff;
+}
+.nav-links a:hover::after,.nav-links a.active::after{
+    transform:scaleX(1);
+}
+.donate-btn{
+    background:linear-gradient(135deg,var(--gold),var(--gold-light))!important;
+    color:var(--green-dark)!important;
+    padding:10px 24px!important;
+    border-radius:100px!important;
+    font-weight:600!important;
+}
+.donate-btn::after{
+    display:none!important;
+}
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:4px;
+}
+.hamburger span{
+    width:24px;
+    height:2px;
+    background:#fff;
+    display:block;
+}
+.page-hero{
+    height:440px;
+    background:linear-gradient(158deg,var(--green-dark) 0%,var(--green-mid) 55%,var(--green) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:74px;
+    position:relative;
+    overflow:hidden;
+}
+.page-hero::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:var(--warm-white);
+    clip-path:ellipse(55% 100% at 50% 100%);
+}
+.page-hero-content{
+    position:relative;
+    z-index:1;
+}
+.page-tag{
+    display:inline-block;
+    font-size:10.5px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    border:1px solid rgba(232,160,32,.35);
+    padding:6px 18px;
+    border-radius:100px;
+    margin-bottom:18px;
+}
+.page-hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(40px,6vw,68px);
+    color:#fff;
+    font-weight:300;
+    line-height:1.1;
+}
+.page-hero h1 em{
+    font-style:italic;
+    color:var(--gold-light);
+}
+.page-content{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 5%;
+}
+.divider-gold{
+    width:56px;
+    height:2px;
+    background:linear-gradient(90deg,var(--gold),var(--gold-light));
+    margin-bottom:22px;
+}
+.leadership-intro{
+    text-align:center;
+    margin-bottom:56px;
+}
+.leadership-intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(34px,4vw,50px);
+    color:var(--green-dark);
+    font-weight:300;
+    margin-bottom:14px;
+}
+.leadership-intro p{
+    font-size:14.5px;
+    color:var(--text-mid);
+    max-width:580px;
+    margin:0 auto;
+    line-height:1.8;
+}
+.leaders-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+    gap:26px;
+    margin-bottom:72px;
+}
+.leader-card{
+    background:var(--warm-white);
+    border:1px solid rgba(46,139,87,.12);
+    border-radius:20px;
+    overflow:hidden;
+    transition:all .4s var(--t);
+}
+.leader-card:hover{
+    transform:translateY(-7px);
+    box-shadow: 0 25px 70px rgba(13,61,42,.2),
+                0 0 0 1px rgba(46,139,87,.2);
+    border-color:rgba(46,139,87,.28);
+}
+.leader-card:hover .leader-photo {
+    transform: scale(1.05);
+}
+.leader-photo{
+    height:240px;
+    position:relative;
+    transition: transform .5s ease;
+    overflow:hidden;
+    background:linear-gradient(155deg,var(--green-dark),var(--green));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.leader-initials{
+    font-family:'Cormorant Garamond',serif;
+    font-size:64px;
+    color:rgba(255,255,255,.35);
+    font-weight:300;
+}
+.leader-photo-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(5, 108, 116, 0.144),transparent);
+}
+.leader-badge{
+    position:absolute;
+    bottom:14px;
+    left:18px;
+    background:rgba(95, 232, 32, 0.9);
+    color:var(--green-dark);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    padding:5px 13px;
+    border-radius:100px;
+}
+.leader-info{
+    padding:26px 26px 30px;
+}
+.leader-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:23px;
+    color:var(--green-dark);
+    font-weight:500;
+    margin-bottom:3px;
+}
+.leader-info .title{
+    font-size:11.5px;
+    color:var(--green);
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    font-weight:500;
+    margin-bottom:12px;
+}
+.leader-info p{
+    font-size:13px;
+    color:var(--text-light);
+    line-height:1.75;
+    margin-bottom:16px;
+}
+.leader-socials{
+    display:flex;
+    gap:9px;
+}
+.social-btn{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:var(--cream);
+    border:1px solid rgba(46,139,87,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    cursor:pointer;
+    transition:all .3s;
+    text-decoration:none;
+    color:var(--green);
+}
+.social-btn:hover{
+    background:var(--green);
+    color:#fff;
+    border-color:var(--green);
+}
+.committee-block{
+    background:var(--cream);
+    border-radius:22px;
+    padding:52px 44px;
+    margin-bottom:36px;
+}
+.committee-block h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    color:var(--green-dark);
+    font-weight:400;
+    margin-bottom:6px;
+}
+.committee-block>p{
+    font-size:13.5px;
+    color:var(--text-light);
+    margin-bottom:32px;
+    line-height:1.7;
+}
+.committee-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:14px;
+}
+.committee-member{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:15px 18px;
+    background:#fff;
+    border-radius:12px;
+    border:1px solid rgba(46,139,87,.1);
+    transition:all .3s;
+}
+.committee-member:hover{
+    border-color:rgba(46,139,87,.28);
+    transform:translateX(4px);
+    box-shadow:0 4px 18px rgba(13,61,42,.08);
+}
+.comm-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--green),var(--green-mid));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    color:#fff;
+    flex-shrink:0;
+}
+.comm-info span:first-child{
+    display:block;
+    font-size:13.5px;
+    font-weight:500;
+    color:var(--charcoal);
+    margin-bottom:2px;
+}
+.comm-info span:last-child{
+    font-size:11px;
+    color:var(--text-light);
+}
+footer{
+    background: linear-gradient(135deg, #0a5c2a, #0d2e6e);  
+    padding:70px 5% 34px;
+    position:relative;
+}
+footer::before{
+    content:'';
+    position:absolute;
+    top:0;left:0;
+    right:0;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:44px;
+    margin-bottom:52px;
+}
+.footer-brand p{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    line-height:1.8;
+    margin:14px 0 22px;
+}
+.footer-socials{
+    display:flex;
+    gap:9px;
+}
+.footer-social-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    cursor:pointer;
+    transition:all .3s;
+    color:rgba(255,255,255,.55);
+    text-decoration:none;
+}
+.footer-social-btn:hover{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:var(--green-dark);
+}
+.footer-col h4{
+    font-size:10.5px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    margin-bottom:18px;
+    font-weight:500;
+}
+.footer-col ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+.footer-col ul li a{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    text-decoration:none;
+    transition:color .3s;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding-top:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.footer-bottom p{
+    font-size:11.5px;
+    color:rgba(255,255,255,.3);
+}
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s,transform .7s;
+}
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(28px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:1024px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+}
+  .impact-section,.about-intro,.donate-content{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+}
+
+@media(max-width:768px){
+  nav{padding:0 4%;}
+  .nav-links{
+    display:none;
+}
+  .hamburger{
+    display:flex;
+}
+  .nav-links.open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:74px;left:0;
+    right:0;
+    background:rgba(13,61,42,.98);
+    padding:18px;
+    gap:4px;
+    border-bottom:1px solid rgba(232,160,32,.2);
+}
+  .hero h1{
+    font-size:42px;
+}
+  .services-strip{
+    grid-template-columns:1fr;
+}
+  .stats-grid,.values-grid,.amount-options{
+    grid-template-columns:1fr 1fr;
+}
+  .leaders-grid,.conduct-sections{
+    grid-template-columns:1fr;
+}
+  .conduct-nav{
+    position:static;
+}
+  .donate-form-card{
+    position:static;
+}
+  .mission-block,.pledge-block{
+    padding:36px 24px;
+}
+  .committee-block{
+    padding:36px 24px;
+}
+  .footer-grid{
+    grid-template-columns:1fr;
+}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:32px;}
+  .hero-cta{
+    flex-direction:column;
+    align-items:center;
+}
+  .stats-grid,.values-grid,.amount-options,.freq-toggle{
+    grid-template-columns:1fr;
+}
+  .page-hero{
+    height:320px;
+}
+  .conduct-article,.objectives-box{
+    padding:28px 20px;
+}
+  .donate-form-card{
+    padding:28px 20px;
+}
+  .footer-grid{
+    grid-template-columns:1fr;
+}
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="images/logo.jpeg" class="logo">
+    <div class="logo-text">
+        <span>Next Step Initiative</span>
+        <span>Career Guidance & Counseling</span>
+    </div>
+</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="leadership.html" class="active">Leadership</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
+    <li><a href="donate.html" class="donate-btn"> Support Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-tag">The People Behind Next Step</div>
+    <h1>Our <em>Leadership</em></h1>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="leadership-intro reveal">
+    <div class="divider-gold" style="margin:0 auto 18px;"></div>
+    <h2>Guided by Passion & Expertise</h2>
+    <p>Our leadership committee comprises 20 professionals drawn from diverse sectors, united by a shared commitment to transforming career guidance for students in the Lango sub-region.</p>
+  </div>
+
+  <div class="leaders-grid">
+    <div class="leader-card reveal">
+      <div class="leader-photo">
+        <div class="leader-initials">AEG</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Executive Director</div>
+    </div>
+      <div class="leader-info">
+        <h3>Abura Emmanuel Gerald</h3>
+        <div class="title">Executive Director & Founder</div>
+        <p> Provides overall strategic leadership and vision for the Next Step Initiative. 
+           Oversees all operations, partnerships, and programs across the Lango sub-region, 
+            ensuring the initiative stays true to its mission of empowering students through 
+            professional career guidance and counseling.</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#1a3d5c,#2e6a9a);">
+        <div class="leader-initials">Ms.O</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Managing Director</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms Dorcus Labejja</h3>
+        <div class="title">Operations & Management</div>
+        <p>Supports the Executive Director in day-to-day management of the initiative. 
+        Coordinates all departments, ensures organizational efficiency, and drives 
+        the implementation of strategic plans across schools and communities in the 
+        Lango sub-region.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+      </div>
+    </div>
+    
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#3d1a2a,#7a3a55);">
+        <div class="leader-initials">Ms.A</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Program Manager</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms. Akech Tracy</h3>
+        <div class="title">Programs & Implementation</div>
+        <p>Designs, plans, and oversees the delivery of all career guidance and 
+        counseling programs in schools. Manages timelines, resources, and teams 
+        to ensure every school visit, workshop, and counseling session achieves 
+        maximum impact for students.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#1a3a1a,#2a6a2a);">
+        <div class="leader-initials">Ms.A</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Counseling & Mental Health Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms Alwoch Narose.</h3>
+        <div class="title">Student Wellness & Counseling</div>
+        <p>Leads the delivery of professional individual and group counseling 
+        sessions for students. Provides psychological support, mental health 
+        awareness, and ensures every student receives safe, ethical, and 
+        compassionate guidance in a confidential environment.</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#3a2a1a,#7a5a2a);">
+        <div class="leader-initials">Mr.E</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Career Guidance Officer</div></div>
+      <div class="leader-info">
+        <h3>Mr. Ebong Johnson</h3>
+        <div class="title">Career Development</div>
+        <p>Specializes in helping students explore career options, understand 
+        educational pathways, and align their interests and abilities with the 
+        right professions. Facilitates career workshops, aptitude assessments, 
+        and one-on-one guidance sessions across schools in the region.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#1a2a3a,#2a4a6a);">
+        <div class="leader-initials">Ms.A</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Partnership & Resource Mobilization Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms. Alaba Faith Addios</h3>
+        <div class="title">Partnerships & Funding</div>
+        <p> Identifies, develops, and manages strategic partnerships with 
+        government agencies, NGOs, private organizations, and community leaders. 
+        Leads resource mobilization efforts to secure financial and technical 
+        support for the sustainability of the initiative</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#644b31,#7a6e2a9d);">
+        <div class="leader-initials">Mr.O</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Public Relations & Communication Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Mr. Obong Kizito Albo </h3>
+        <div class="title">Communications & Outreach</div>
+        <p>Manages the public image and communications of the Next Step 
+        Initiative. Develops and executes communication strategies, handles 
+        media relations, and ensures the initiative's story and impact reach 
+        students, schools, donors, and the wider community effectively.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#846986,#7f6ec4);">
+        <div class="leader-initials">Mr.E</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Creative Director</div>
+    </div>
+      <div class="leader-info">
+        <h3>Mr. Ebong Samual</h3>
+        <div class="title">Design & Creative Strategy</div>
+        <p>Leads the creative vision of the initiative across all platforms 
+        and materials. Designs compelling content, branding assets, and 
+        campaign visuals that communicate the initiative's mission powerfully 
+        and inspire students, partners, and supporters to take action.</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#05020f,#4e0a0a00);">
+        <div class="leader-initials">Ms.A</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">IT & Media Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms. Adongo Glory</h3>
+        <div class="title">Technology & Digital Media</div>
+        <p>Manages the initiative's digital infrastructure, website, and 
+        social media platforms. Produces multimedia content including photos, 
+        videos, and digital reports that document and amplify the impact of 
+        the initiative across online and offline channels.</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#12053a9c,#0f330400);">
+        <div class="leader-initials">Mr.E</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Monitoring & Evaluation Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Mr. Emmanual Ogwang Eyal</h3>
+        <div class="title">Impact & Accountability</div>
+        <p>Designs and implements frameworks to track, measure, and evaluate 
+        the impact of all programs and interventions. Produces data-driven 
+        reports that guide decision-making, demonstrate accountability to 
+        stakeholders, and ensure continuous improvement in program delivery.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#ba5ec0d3,#b161a6);">
+        <div class="leader-initials">Ms.A</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">Procurement & Logistics Officer</div>
+    </div>
+      <div class="leader-info">
+        <h3>Ms. Acheng Holiver Faith</h3>
+        <div class="title">Procurement & Logistics</div>
+        <p>Manages the sourcing, procurement, and distribution of all 
+        materials, equipment, and resources needed for school visits, 
+        workshops, and counseling sessions. Ensures smooth logistical 
+        coordination for all field activities across the Lango sub-region..</p>
+        <div class="leader-socials">
+            <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="leader-card reveal">
+      <div class="leader-photo" style="background:linear-gradient(155deg,#835a2dab,#385715);">
+        <div class="leader-initials">Mr.W</div>
+        <div class="leader-photo-overlay"></div>
+        <div class="leader-badge">General Secretary</div></div>
+      <div class="leader-info">
+        <h3>Mr. Wambede Jonathan C</h3>
+        <div class="title">Administration & Secretariat</div>
+        <p> Manages all administrative functions of the initiative including 
+    records, correspondence, meetings, and documentation. Serves as the 
+    central point of coordination between all departments, ensuring 
+    smooth internal communication and organizational efficiency.</p>
+        <div class="leader-socials">
+           <div class="social-btn">
+                <a href="tel:+256783471624" class="social-btn">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+            <div class="social-btn">
+                <a href="mailto:nextstepug@gmail.com" class="social-btn">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="committee-block reveal">
+    <h2>Leadership Committee</h2>
+    <p>Our 20-member committee of professionals from diverse sectors guides the strategic direction, school engagements, resource mobilization, and impact evaluation of the Next Step Initiative.</p>
+    <div class="committee-list">
+      
+        <div class="committee-member">
+        <div class="comm-avatar">J</div>
+        <div class="comm-info">
+            <span>Dr. Ogenga Joseph</span>
+            <span>Medicine & Health</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#5a3a7c,#8a5fc0);">N</div>
+        <div class="comm-info">
+            <span>Ms. Nakato Ruth</span>
+            <span>Education Sector</span>
+        </div>
+    </div>
+    <!--
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#1a5c5c,#2e9a9a);">B</div>
+        <div class="comm-info">
+            <span>Mr. Bongomin Denis</span>
+            <span>Engineering & Technology</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#5c3a1a,#9a6030);">O</div>
+        <div class="comm-info">
+            <span>Ms. Opio Florence</span>
+            <span>Law & Governance</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#1a3a5c,#2e6090);">K</div>
+        <div class="comm-info"><span>Mr. Komakech Alex</span>
+            <span>Finance & Banking</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#3a5c1a,#6a9a30);">A</div>
+        <div class="comm-info">
+            <span>Dr. Atim Pamela</span>
+            <span>Agriculture & Environment</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#5c1a3a,#9a3065);">L</div>
+        <div class="comm-info">
+            <span>Mr. Lapok Samuel</span>
+            <span>Media & Communications</span>
+        </div>
+    </div>
+      <div class="committee-member">
+        <div class="comm-avatar" style="background:linear-gradient(135deg,#1a5c3a,#2e9a60);">G</div>
+        <div class="comm-info">
+            <span>Ms. Gulu Irene</span>
+            <span>Social Work & NGO</span>
+        </div>
+    </div>
+    -->  
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+        <div class="nav-logo">
+            <img src="images/logo.jpeg" class="logo">
+            <div class="logo-text">
+                <span>Next Step Initiative</span>
+                <span>Career Guidance & Counseling</span>
+            </div></div><p>Empowering students in the Lango sub-region to make informed career choices.</p>
+            <div class="footer-socials">
+                <div class="footer-social-btn">
+            <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="https://x.com/nextstep624" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+            </div>
+        </div>
+    <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="conduct.html">Conduct</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+            <li><a>School Visits</a></li>
+            <li><a>Career Counseling</a></li>
+            <li><a>Workshops</a></li>
+            <li><a>Mentorship</a></li>
+        </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+      <li>
+        <a>
+            <i class="fas fa-map-marker-alt"></i>
+             Lango Sub-Region, Uganda
+            </a>
+        </li>
+      <li>
+        <a>
+            <i class="fas fa-phone"></i> 
+            +256 783 471 624
+        </a>
+    </li>
+      <li>
+        <a>
+            <i class="fas fa-envelope"></i>
+            nextstepug@gmail.com
+        </a>
+    </li>
+    <li>
+        <a>
+            <i class="fas fa-user"></i> 
+            Abura Emmanuel Gerald
+        </a>
+    </li>
+    </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Next Step Career Guidance & Counseling Services Initiative.</p>
+    <p>Privacy Policy · Terms of Service</p>
+</div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.transitionDelay=`${i*.07}s`;e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+document.querySelectorAll('.leader-card').forEach(card => {
+    card.addEventListener('click', () => {
+        alert("You can expand this into a full profile modal");
+    });
+});
+</script>
+</body>
+</html>
