@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Code of Conduct | Next Step Career Guidance Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --green-dark: #0a5c2a;
+  --green-mid: #1a8a3a;
+  --green: #2db34a;
+  --green-light: #4dcc6a;
+  --blue-dark: #0d2e6e;
+  --blue-mid: #1a4eb5;
+  --blue: #2e6fd4;
+  --blue-light: #5a93e8;
+  --cream: #f0f7f2;
+  --warm-white: #f8fdf9;
+  --gold: #2e6fd4;       
+  --gold-light: #5a93e8; 
+  --charcoal: #0d1a12;
+  --text-mid: #1e4030;
+  --text-light: #4a7060;
+  --t: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family:'DM Sans',sans-serif;
+    background:var(--warm-white);
+    color:var(--charcoal);
+    overflow-x:hidden;
+}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--cream);}
+::-webkit-scrollbar-thumb{background:var(--green);
+    border-radius:3px;
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:74px;
+    background:rgba(13,61,42,.96);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(74,171,117,.2);
+    transition:all .4s;
+}
+nav.scrolled{
+    height:62px;
+    background:rgba(13,61,42,.99);
+    box-shadow:0 4px 40px rgba(0,0,0,.25);
+}
+.nav-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+.logo{
+    width:65px;
+    height:65px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;color:var(--green-dark);
+    font-weight:700;
+    box-shadow:0 0 20px rgba(232,160,32,.35);
+}
+.logo-text span:first-child{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:17px;
+    font-weight:600;
+    color:#fff;
+    line-height:1.1;
+}
+.logo-text span:last-child{
+    font-size:9px;
+    color:var(--gold-light);
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+}
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    list-style:none;
+}
+.nav-links a{
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    color:rgba(255,255,255,.75);
+    padding:8px 15px;
+    border-radius:6px;
+    transition:all .3s;
+    position:relative;
+}
+.nav-links a::after{
+    content:'';
+    position:absolute;
+    bottom:3px;
+    left:15px;
+    right:15px;
+    height:1.5px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transition:transform .3s;
+}
+.nav-links a:hover,.nav-links a.active{
+    color:#fff;
+}
+.nav-links a:hover::after,.nav-links a.active::after{
+    transform:scaleX(1);
+}
+.donate-btn{
+    background:linear-gradient(135deg,var(--gold),var(--gold-light))!important;
+    color:var(--green-dark)!important;
+    padding:10px 24px!important;
+    border-radius:100px!important;
+    font-weight:600!important;
+}
+.donate-btn::after{display:none!important;}
+.hamburger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    padding:4px;
+}
+.hamburger span{
+    width:24px;
+    height:2px;
+    background:#fff;
+    display:block;
+}
+.page-hero{
+    height:440px;
+    background:linear-gradient(158deg,var(--green-dark) 0%,var(--green-mid) 55%,var(--green) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:74px;
+    position:relative;
+    overflow:hidden;
+}
+.page-hero::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:var(--warm-white);
+    clip-path:ellipse(55% 100% at 50% 100%);
+}
+.page-hero-content{
+    position:relative;
+    z-index:1;
+}
+.page-tag{
+    display:inline-block;
+    font-size:10.5px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    border:1px solid rgba(232,160,32,.35);
+    padding:6px 18px;
+    border-radius:100px;
+    margin-bottom:18px;
+}
+.page-hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(40px,6vw,68px);
+    color:#fff;
+    font-weight:300;
+    line-height:1.1;
+}
+.page-hero h1 em{
+    font-style:italic;
+    color:var(--gold-light);
+}
+.page-content{
+    max-width:1100px;
+    margin:0 auto;
+    padding:80px 5%;
+}
+.divider-gold{
+    width:56px;
+    height:2px;
+    background:linear-gradient(90deg,var(--gold),var(--gold-light));
+    margin-bottom:22px;
+}
+.btn-primary{
+    padding:13px 30px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    color:var(--green-dark);
+    border:none;
+    border-radius:100px;font-family:'DM Sans',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 28px rgba(232,160,32,.4);transition:all .35s;}
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+.conduct-intro{
+    text-align:center;
+    margin-bottom:56px;
+}
+.conduct-intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(34px,4vw,50px);
+    color:var(--green-dark);
+    font-weight:300;
+    margin-bottom:14px;
+}
+.conduct-intro p{
+    font-size:14.5px;
+    color:var(--text-mid);
+    max-width:600px;
+    margin:0 auto;
+    line-height:1.8;
+}
+.conduct-sections{
+    display:grid;
+    grid-template-columns:268px 1fr;gap:44px;margin-bottom:56px;
+}
+.conduct-nav{
+    position:sticky;
+    top:86px;
+    height:fit-content;
+}
+.conduct-nav-list{
+    list-style:none;
+    background:var(--cream);
+    border-radius:16px;
+    overflow:hidden;
+    border:1px solid rgba(46,139,87,.1);
+}
+.conduct-nav-list li a{
+    display:flex;
+    align-items:center;
+    gap:11px;padding:13px 18px;
+    text-decoration:none;
+    font-size:12.5px;
+    color:var(--text-mid);
+    border-left:3px solid transparent;
+    transition:all .3s;
+    cursor:pointer;
+}
+.conduct-nav-list li a:hover,.conduct-nav-list li a.c-active{
+    background:#fff;
+    color:var(--green-dark);
+    border-left-color:var(--green);
+    font-weight:500;
+}
+.conduct-nav-list li a .num{
+    width:20px;
+    height:20px;
+    background:rgba(46,139,87,.1);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10.5px;
+    font-weight:600;
+    color:var(--green);
+    flex-shrink:0;
+}
+.conduct-article{
+    background:var(--warm-white);
+    border-radius:18px;
+    padding:44px;
+    border:1px solid rgba(46,139,87,.1);
+    margin-bottom:22px;
+    transition:all .3s;
+}
+.conduct-article:hover{
+    border-color:rgba(46,139,87,.2);
+    box-shadow:0 6px 28px rgba(13,61,42,.06);
+}
+.conduct-article-header{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    margin-bottom:22px;
+    padding-bottom:18px;
+    border-bottom:1px solid rgba(46,139,87,.1);
+}
+.conduct-icon{
+    width:48px;
+    height:48px;
+    background:linear-gradient(135deg,var(--green-dark),var(--green));
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    flex-shrink:0;
+}
+.conduct-article-header h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+    color:var(--green-dark);
+    font-weight:500;
+    line-height:1.2;
+}
+.article-num{
+    font-size:10.5px;
+    color:var(--gold);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:4px;
+    font-weight:500;
+}
+.conduct-article p{
+    font-size:13.5px;
+    color:var(--text-mid);
+    line-height:1.85;
+    margin-bottom:12px;
+}
+.conduct-points{
+    list-style:none;
+    padding:0;
+}
+.conduct-points li{
+    display:flex;
+    gap:11px;
+    padding:9px 0;
+    font-size:13.5px;
+    color:var(--text-mid);
+    border-bottom:1px solid rgba(46,139,87,.07);
+    line-height:1.65;
+}
+.conduct-points li:last-child{
+    border-bottom:none;
+}
+.conduct-points li::before{
+    content:'◆';
+    color:var(--gold);
+    font-size:7px;
+    margin-top:5px;
+    flex-shrink:0;
+}
+.pledge-block{
+    background:linear-gradient(135deg,var(--green-dark),var(--green-mid));
+    border-radius:20px;
+    padding:52px 44px;
+    text-align:center;
+    margin-bottom:40px;
+    position:relative;
+    overflow:hidden;
+}
+.pledge-block::before{
+    content:'✦';
+    position:absolute;
+    top:16px;
+    left:36px;
+    font-size:56px;
+    color:rgba(232,160,32,.1);
+}
+.pledge-block h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:#fff;
+    font-weight:300;
+    margin-bottom:14px;
+}
+.pledge-block p{
+    font-size:17px;
+    color:rgba(255,255,255,.68);
+    line-height:1.8;
+    max-width:620px;
+    margin:0 auto 28px;
+    font-style:italic;
+    font-family:'Cormorant Garamond',serif;
+}
+footer{
+    background: linear-gradient(135deg, #0a5c2a, #0d2e6e);
+    padding:70px 5% 34px;
+    position:relative;
+    overflow:hidden;
+}
+footer::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:44px;
+    margin-bottom:52px;
+}
+.footer-brand p{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    line-height:1.8;
+    margin:14px 0 22px;
+}
+.footer-socials{
+    display:flex;
+    gap:9px;
+}
+.footer-social-btn{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    cursor:pointer;
+    transition:all .3s;
+    color:rgba(255,255,255,.55);
+    text-decoration:none;
+}
+.footer-social-btn:hover{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:var(--green-dark);
+}
+.footer-col h4{
+    font-size:10.5px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    margin-bottom:18px;
+    font-weight:500;
+}
+.footer-col ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+.footer-col ul li a{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
+    text-decoration:none;
+    transition:color .3s;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+}
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding-top:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.footer-bottom p{
+    font-size:11.5px;
+    color:rgba(255,255,255,.3);
+}
+.reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity .7s,transform .7s;
+}
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+@media(max-width:768px){
+    .nav-links{display:none;
+    }
+    .hamburger{
+        display:flex;
+    }
+    .nav-links.open{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:74px;
+        left:0;
+        right:0;
+        background:rgba(13,61,42,.98);
+        padding:18px;
+        gap:4px;
+    }
+    .conduct-sections{
+        grid-template-columns:1fr;
+    }
+    .conduct-nav{
+        position:static;
+    }
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+    .pledge-block{
+        padding:36px 24px;
+    }
+}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="images/logo.jpeg" class="logo">
+    <div class="logo-text"><span>Next Step Initiative</span>
+        <span>Career Guidance & Counseling</span></div>
+    </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="leadership.html">Leadership</a></li>
+    <li><a href="conduct.html" class="active">Conduct</a></li>
+    <li><a href="donate.html" class="donate-btn"> Support Us</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-tag">Ethics & Standards</div>
+    <h1>Code of <em>Conduct</em></h1>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="conduct-intro reveal">
+    <div class="divider-gold" style="margin:0 auto 18px;"></div>
+    <h2>Our Commitment to Ethical Practice</h2>
+    <p>Every member of the Next Step Initiative — staff, volunteers, committee members, and partners — is bound by these principles, which reflect our deepest commitment to the students and communities we serve.</p>
+  </div>
+
+  <div class="conduct-sections">
+    <aside class="conduct-nav">
+      <ul class="conduct-nav-list">
+        <li><a class="c-active" onclick="setNav(this)"><span class="num">1</span>Student-First Principle</a></li>
+        <li><a onclick="setNav(this)"><span class="num">2</span>Professional Integrity</a></li>
+        <li><a onclick="setNav(this)"><span class="num">3</span>Confidentiality</a></li>
+        <li><a onclick="setNav(this)"><span class="num">4</span>Inclusivity</a></li>
+        <li><a onclick="setNav(this)"><span class="num">5</span>Partnerships</a></li>
+        <li><a onclick="setNav(this)"><span class="num">6</span>Accountability</a></li>
+      </ul>
+    </aside>
+    <div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+                <div class="article-num">Article 01</div>
+                <h3>The Student-First Principle</h3>
+            </div>
+        </div>
+        <p>Every decision made within the Next Step Initiative is guided by one overriding question: what is best for the student? The welfare, dignity, and development of the students we serve is the foundation of everything we do.</p>
+        <ul class="conduct-points">
+          <li>All guidance and counseling must prioritize the holistic well-being and long-term interests of the student above all other considerations.</li>
+          <li>No activity, partnership, or resource shall be pursued if it compromises the safety, dignity, or development of any student.</li>
+          <li>Students must be treated as active participants in their career journeys — their voices, interests, and choices must always be respected.</li>
+          <li>Sessions must be age-appropriate, culturally sensitive, and adapted to the specific contexts of P7, S4, and S6 learners.</li>
+        </ul>
+      </div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-equals"></i></div>
+            <div>
+                <div class="article-num">Article 02</div>
+                <h3>Professional Integrity & Excellence</h3>
+            </div>
+        </div>
+        <p>All members of the Next Step Initiative are expected to uphold the highest standards of professional conduct and competence in every interaction with students, schools, and partners.</p>
+        <ul class="conduct-points">
+          <li>Represent qualifications, roles, and affiliations truthfully and accurately at all times.</li>
+          <li>Deliver career guidance sessions grounded in accurate, up-to-date information about professions and educational pathways.</li>
+          <li>Engage in continuous learning and professional development relevant to career counseling and youth guidance.</li>
+          <li>Avoid making promises or guarantees to students about career outcomes that cannot be substantiated.</li>
+          <li>Seek peer support and consultation in cases requiring specialized expertise beyond one's scope.</li>
+        </ul>
+      </div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-lock"></i></div>
+            <div><div class="article-num">Article 03</div>
+            <h3>Confidentiality & Trust</h3>
+        </div>
+    </div>
+        <p>Students must feel safe to share their thoughts, fears, and aspirations freely. The confidential nature of counseling interactions is a cornerstone of effective guidance.</p>
+        <ul class="conduct-points">
+          <li>All personal information shared by students during individual counseling sessions must be kept strictly confidential.</li>
+          <li>Information may only be shared with school authorities or guardians where required by law or to protect the student's safety.</li>
+          <li>Students must be clearly informed at the outset about the nature and limits of confidentiality.</li>
+          <li>Records and data collected must be stored securely and used only for the purposes of improving guidance services.</li>
+        </ul>
+      </div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-globe"></i></div>
+            <div>
+                <div class="article-num">Article 04</div>
+            <h3>Inclusivity & Non-Discrimination</h3>
+        </div>
+    </div>
+        <p>The Next Step Initiative is committed to reaching every student in the Lango sub-region, regardless of gender, ethnicity, religion, disability, or socioeconomic background.</p>
+        <ul class="conduct-points">
+          <li>Programs must be designed and delivered to ensure equitable participation of students from both rural and urban schools.</li>
+          <li>No student shall be denied access to guidance or counseling services on the basis of any personal characteristic.</li>
+          <li>All communication and sessions must be delivered in an accessible and culturally affirming manner.</li>
+          <li>Particular attention must be paid to girls and marginalized groups who may face additional barriers to career exploration.</li>
+          <li>Any discriminatory behavior by members or volunteers will be subject to immediate review and disciplinary action.</li>
+        </ul>
+      </div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+                <div class="article-num">Article 05</div>
+                <h3>Responsible Partnerships</h3>
+            </div>
+        </div>
+        <p>Strategic partnerships are central to the sustainability and reach of the Next Step Initiative. All partnerships must align with and 
+            uphold our values and the interests of the students we serve.</p>
+        <ul class="conduct-points">
+          <li>All partnerships must be formalized through clear agreements outlining roles, responsibilities, and expectations.</li>
+          <li>Partners must demonstrate a commitment to student welfare and the ethical standards of this initiative.</li>
+          <li>The initiative will not accept support from organizations whose activities conflict with the well-being of children and youth.</li>
+          <li>Mentors and visiting professionals must be vetted, briefed on conduct expectations, and monitored during engagements with students.</li>
+        </ul>
+      </div>
+      <div class="conduct-article reveal">
+        <div class="conduct-article-header">
+            <div class="conduct-icon"><i class="fas fa-chart-bar"></i></div>
+            <div>
+                <div class="article-num">Article 06</div>
+                <h3>Accountability & Impact</h3>
+            </div>
+        </div>
+        <p>The Next Step Initiative holds itself accountable to the students, schools, and communities it serves, as well as to its funders and partners. 
+            Transparency and evidence of impact are non-negotiable.</p>
+        <ul class="conduct-points">
+          <li>The initiative will maintain accurate records of all school visits, counseling sessions, and student interactions.</li>
+          <li>Regular monitoring and evaluation will be conducted to assess the impact on students' career decision-making.</li>
+          <li>Financial resources will be managed transparently, with clear reporting to all funders and stakeholders.</li>
+          <li>Feedback from students, schools, and communities will be actively sought and used to improve program delivery.</li>
+          <li>Any violations of this Code of Conduct will be investigated and addressed promptly and impartially.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pledge-block reveal">
+    <h2>Our Pledge to Every Student</h2>
+    <p>"We commit to serving you with honesty, respect, and genuine care — because your future matters, and guiding you toward it is our highest responsibility."</p>
+    <button class="btn-primary" onclick="location.href='donate.html'">Support Our Mission</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="images/logo.jpeg" class="logo">
+        <div class="logo-text">
+            <span>Next Step Initiative</span>
+            <span>Career Guidance & Counseling</span>
+        </div>
+    </div>
+      <p>Empowering students in the Lango sub-region of Uganda to make informed career 
+        choices and build purposeful futures through professional guidance and mentorship.</p>
+      <div class="footer-socials">
+        <div class="footer-social-btn">
+            <a href="#" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="https://x.com/nextstep624" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <div class="footer-social-btn">
+            <a href="#" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="conduct.html">Conduct</a></li>
+      <li><a href="donate.html">Support Us</a></li>
+    </ul>
+</div>
+    <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+      <li><a>School Visits</a></li><li><a>Career Counseling</a></li><li><a>Workshops</a></li><li><a>Mentorship</a></li><li><a>Partnerships</a></li>
+    </ul>
+</div>
+    <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+      <li>
+        <a>
+            <i class="fas fa-map-marker-alt"></i>
+             Lango Sub-Region, Uganda
+            </a>
+        </li>
+      <li>
+        <a>
+            <i class="fas fa-phone"></i> 
+            +256 783 471 624
+        </a>
+    </li>
+      <li>
+        <a>
+            <i class="fas fa-envelope"></i>
+            nextstepug@gmail.com
+        </a>
+    </li>
+    <li>
+        <a>
+            <i class="fas fa-user"></i> 
+            Abura Emmanuel Gerald
+        </a>
+    </li>
+    </ul>
+</div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Next Step Career Guidance & Counseling Services Initiative. All rights reserved.</p>
+    <p>Privacy Policy · Terms of Service</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>40));
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){e.target.style.transitionDelay=`${i*.07}s`;e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function setNav(el){document.querySelectorAll('.conduct-nav-list a').forEach(a=>a.classList.remove('c-active'));el.classList.add('c-active');}
+</script>
+</body>
+</html>
