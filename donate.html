@@ -6,7 +6,6 @@
 <title>Support Us | Next Step Career Guidance Initiative</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <style>
@@ -277,14 +276,17 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-brand" href="index.html">
-    <div class="brand-mark">N</div>
-    <div class="brand-text"><span class="t1">Next Step</span><span class="t2">Career Guidance Initiative</span></div>
+    <img src="images/logo.jpeg" class="brand-mark">
+    <div class="brand-text">
+        <span class="t1">Next Step</span>
+        <span class="t2">Career Guidance Initiative</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="leadership.html">Leadership</a></li>
-    <li><a href="donate.html">Conduct</a></li>
+    <li><a href="conduct.html">Conduct</a></li>
   </ul>
   <button class="nav-cta">📱 Donate via MoMo</button>
   <div class="hamburger" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -292,10 +294,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="nextstep-pro.html">Home</a>
-  <a href="nextstep-pro.html">About</a>
-  <a href="nextstep-pro.html">Leadership</a>
-  <a href="nextstep-pro.html">Conduct</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="conduct.html">Conduct</a>
 </div>
 
 <!-- HERO -->
@@ -306,8 +308,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="hero-badge-row">
     <div class="hero-badge">📱 MTN Mobile Money</div>
     <div class="hero-badge">🇺🇬 Uganda Shillings (UGX)</div>
-    <div class="hero-badge">🔒 Safe & Instant</div>
-    <div class="hero-badge">✉ Instant Receipt</div>
+    <div class="hero-badge">
+        <i class="fa-solid fa-shield-halved"></i>
+         Safe & Instant
+        </div>
+    <div class="hero-badge">
+        <i class="fas fa-envelope"></i>
+        Instant Receipt
+    </div>
   </div>
 </div>
 
@@ -322,28 +330,36 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 
     <div class="imp-tiers">
       <div class="imp-tier reveal" onclick="quickSelect(50000)">
-        <div class="tier-ico">📋</div>
+        <div class="tier-ico">
+            <i class="fas fa-book"></i>
+        </div>
         <div class="tier-txt">
           <strong>UGX 50,000 — One Guidance Session</strong>
           <span>Covers transport, materials, and facilitation for one structured career guidance session in a school.</span>
         </div>
       </div>
       <div class="imp-tier reveal" onclick="quickSelect(200000)">
-        <div class="tier-ico">🏫</div>
+        <div class="tier-ico">
+            <i class="fas fa-school"></i>
+        </div>
         <div class="tier-txt">
           <strong>UGX 200,000 — Full School Visit</strong>
           <span>Sponsors a complete school visit with counseling, group sessions, and resource materials for a full class.</span>
         </div>
       </div>
       <div class="imp-tier reveal" onclick="quickSelect(500000)">
-        <div class="tier-ico">🎤</div>
+        <div class="tier-ico">
+             <i class="fas fa-bullhorn"></i>
+        </div>
         <div class="tier-txt">
           <strong>UGX 500,000 — Career Workshop</strong>
           <span>Funds an interactive workshop reaching up to 50 P7, S4, or S6 students in a single session.</span>
         </div>
       </div>
       <div class="imp-tier reveal" onclick="quickSelect(2000000)">
-        <div class="tier-ico">🌍</div>
+        <div class="tier-ico">
+            <i class="fas fa-globe"></i>
+        </div>
         <div class="tier-txt">
           <strong>UGX 2,000,000 — School Partnership</strong>
           <span>Establishes a full-term partnership with a school for sustained, ongoing career guidance programming.</span>
@@ -355,20 +371,60 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <h3>How MTN MoMo Works</h3>
       <p>Simple steps to complete your donation in under 2 minutes.</p>
       <div class="how-steps">
-        <div class="how-step"><div class="hs-num">1</div><div class="hs-txt"><strong>Dial <code>*165#</code> on your phone</strong><span>Open your MTN Mobile Money menu.</span></div></div>
-        <div class="how-step"><div class="hs-num">2</div><div class="hs-txt"><strong>Select <code>Send Money</code></strong><span>Choose Transfer Money → Send to MTN Number.</span></div></div>
-        <div class="how-step"><div class="hs-num">3</div><div class="hs-txt"><strong>Enter <code>0783471624</code></strong><span>This is the Next Step Initiative registered account.</span></div></div>
-        <div class="how-step"><div class="hs-num">4</div><div class="hs-txt"><strong>Enter your amount & PIN</strong><span>Confirm and you'll receive an SMS with your Transaction ID.</span></div></div>
-        <div class="how-step"><div class="hs-num">5</div><div class="hs-txt"><strong>Enter Transaction ID on the form</strong><span>Paste it in the form to confirm your donation and receive a receipt.</span></div></div>
+        <div class="how-step">
+            <div class="hs-num">1</div>
+            <div class="hs-txt">
+                <strong>Dial <code>*165#</code> on your phone</strong>
+                <span>Open your MTN Mobile Money menu.</span>
+            </div>
+        </div>
+        <div class="how-step">
+            <div class="hs-num">2</div>
+            <div class="hs-txt">
+                <strong>Select <code>Send Money</code></strong>
+                <span>Choose Transfer Money → Send to MTN Number.</span>
+            </div>
+        </div>
+        <div class="how-step">
+            <div class="hs-num">3</div>
+            <div class="hs-txt">
+                <strong>Enter <code>0783471624</code></strong>
+                <span>This is the Next Step Initiative registered account.</span>
+            </div>
+        </div>
+        <div class="how-step">
+            <div class="hs-num">4</div>
+            <div class="hs-txt">
+                <strong>Enter your amount & PIN</strong>
+                <span>Confirm and you'll receive an SMS with your Transaction ID.</span>
+            </div>
+        </div>
+        <div class="how-step">
+            <div class="hs-num">5</div>
+            <div class="hs-txt">
+                <strong>Enter Transaction ID on the form</strong>
+                <span>Paste it in the form to confirm your donation and receive a receipt.</span>
+            </div>
+        </div>
       </div>
     </div>
 
     <div class="contact-box reveal">
       <h4>Need Help?</h4>
       <p>For donation queries, receipts, or any payment issues, contact us directly:</p>
-      <div class="ci">📞 +256 783 471 624</div>
-      <div class="ci" style="color:var(--g2);">✉ <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f79695828596929a9a96cec1b7909a969e9bd994989a">[email&#160;protected]</a></div>
-      <div class="ci" style="color:var(--muted);font-size:13px;font-weight:400;margin-top:6px;">👤 Abura Emmanuel Gerald · Executive Director</div>
+      <div class="ci">
+        <i class="fas fa-phone"></i> 
+         +256 783 471 624
+        </div>
+      <div class="ci" style="color:var(--muted);">
+        <i class="fas fa-envelope"></i>
+            nextstepug@gmail.com
+        </a>
+    </div>
+      <div class="ci" style="color:var(--muted);font-size:13px;font-weight:400;margin-top:6px;">
+        <i class="fas fa-user"></i> 
+         Abura Emmanuel Gerald · Executive Director
+        </div>
     </div>
   </div>
 
@@ -431,27 +487,48 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <!-- STEPS -->
       <span class="blk-lbl">Payment Steps</span>
       <div class="pay-steps">
-        <div class="ps"><div class="ps-num">1</div><div class="ps-txt"><strong>Dial <code>*165#</code> on your MTN line</strong><span>Open your MTN Mobile Money menu.</span></div></div>
-        <div class="ps"><div class="ps-num">2</div><div class="ps-txt"><strong>Select Send Money → MTN Number</strong><span>Enter number <code id="stepNum">0783471624</code></span></div></div>
-        <div class="ps"><div class="ps-num">3</div><div class="ps-txt"><strong>Enter amount <code id="stepAmt">200,000</code> UGX</strong><span>Match the amount you selected above.</span></div></div>
-        <div class="ps"><div class="ps-num">4</div><div class="ps-txt"><strong>Enter your PIN & confirm</strong><span>You'll receive a confirmation SMS with your Transaction ID.</span></div></div>
+        <div class="ps">
+            <div class="ps-num">1</div>
+            <div class="ps-txt">
+                <strong>Dial 
+                <code>*165#</code> on your MTN line
+            </strong>
+            <span>Open your MTN Mobile Money menu.</span>
+        </div>
+    </div>
+        <div class="ps">
+            <div class="ps-num">2</div>
+            <div class="ps-txt">
+                <strong>Select Send Money → MTN Number</strong>
+                <span>Enter number 
+                    <code id="stepNum">0783471624</code>
+                </span>
+            </div>
+        </div>
+        <div class="ps">
+            <div class="ps-num">3</div>
+            <div class="ps-txt">
+                <strong>Enter amount 
+                    <code id="stepAmt">200,000</code> UGX
+                </strong>
+                <span>Match the amount you selected above.</span>
+            </div>
+        </div>
+        <div class="ps">
+            <div class="ps-num">4</div>
+            <div class="ps-txt">
+                <strong>Enter your PIN & confirm</strong>
+                <span>You'll receive a confirmation SMS with your Transaction ID.</span>
+            </div>
+        </div>
       </div>
 
       <div class="divider-line"></div>
 
       <!-- PERSONAL INFO -->
-      <div class="form-row">
-        <label>Your Full Name *</label>
-        <input class="d-field" type="text" id="dName" placeholder="Enter your full name"/>
-    </div>
-      <div class="form-row">
-        <label>Email Address * <span style="font-size:10px;color:var(--muted);font-weight:400;">(for your receipt)</span></label>
-        <input class="d-field" type="email" id="dEmail" placeholder="your@email.com"/>
-    </div>
-      <div class="form-row">
-        <label>Your MTN Phone Number *</label>
-        <input class="d-field" type="tel" id="dPhone" placeholder="+256 7XX XXX XXX"/>
-    </div>
+      <div class="form-row"><label>Your Full Name *</label><input class="d-field" type="text" id="dName" placeholder="Enter your full name"/></div>
+      <div class="form-row"><label>Email Address * <span style="font-size:10px;color:var(--muted);font-weight:400;">(for your receipt)</span></label><input class="d-field" type="email" id="dEmail" placeholder="your@email.com"/></div>
+      <div class="form-row"><label>Your MTN Phone Number *</label><input class="d-field" type="tel" id="dPhone" placeholder="+256 7XX XXX XXX"/></div>
 
       <div class="divider-line"></div>
 
@@ -498,13 +575,13 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="foot-brand">
       <div class="nav-brand">
         <img src="images/logo.jpeg" class="brand-mark">
-        <div class="brand-text"><span class="t1">Next Step</span>
+        <div class="brand-text">
+            <span class="t1">Next Step</span>
             <span class="t2">Career Guidance Initiative</span>
         </div>
     </div>
       <p>Your MTN MoMo donation empowers a student in Lango, Uganda to take their next step with confidence, clarity, and purpose.</p>
-      <div class="foot-socials">
-        <div class="fsoc">
+      <div class="foot-socials"><div class="fsoc">
             <a href="#" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
             </a>
@@ -679,18 +756,7 @@ function validate() {
   return { name, email, phone, amt, txId };
 }
 
-/* ══════════════════════════════════════
-   CONFIRM DONATION
-   ─────────────────────────────────────
-   Money goes directly to MTN MoMo:
-   Number : 0783 471 624
-   Name   : Abura Emmanuel Gerald
-   Account: Next Step Initiative
-   ─────────────────────────────────────
-   To receive email alerts for every
-   donation, add EmailJS below.
-   Sign up free at emailjs.com
-══════════════════════════════════════ */
+/* ══ CONFIRM DONATION ══ */
 function confirmDonation() {
   const data = validate();
   if (!data) return;
@@ -736,7 +802,6 @@ function confirmDonation() {
       showSuccess(data);
     });
 }
-
 
 /* ══ SHOW SUCCESS ══ */
 function showSuccess(data) {
