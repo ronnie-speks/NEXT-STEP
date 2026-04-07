@@ -573,12 +573,15 @@ nav.scrolled{
     margin-top:5px;
     flex-shrink:0;
 }
+
 /* FOOTER */
 footer{
-    background:var(--charcoal);
+     background: linear-gradient(135deg, #0a5c2a, #0d2e6e);
     padding:70px 5% 34px;
     position:relative;
+    overflow:hidden;
 }
+
 footer::before{
     content:'';
     position:absolute;
@@ -586,81 +589,81 @@ footer::before{
     left:0;
     right:0;
     height:1px;
-    background:linear-gradient(90deg,transparent,var(--g3),var(--b3),transparent);
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
 }
-.foot-grid{
+.footer-grid{
     display:grid;
     grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:44px;
-    margin-bottom:52px;
+    gap:44px;margin-bottom:52px;
 }
-.foot-brand p{
+.footer-brand p{
     font-size:12.5px;
-    color:rgba(255,255,255,.35);
-    line-height:1.9;
+    color:rgba(255,255,255,.45);
+    line-height:1.8;
     margin:14px 0 22px;
 }
-.foot-socials{
-    
+.logo-text{
+    color: white;
+}
+.footer-socials{
     display:flex;
     gap:9px;
 }
-.fsoc{width:34px;
+.footer-social-btn{
+    width:34px;
     height:34px;
     border-radius:50%;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.13);
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:13px;
     cursor:pointer;
     transition:all .3s;
-    color:rgba(255,255,255,.45);
+    color:rgba(255,255,255,.55);
     text-decoration:none;
 }
-.fsoc:hover{
-    background:var(--grd-accent);
-    border-color:transparent;
-    color:#fff;
+.footer-social-btn:hover{
+    background:var(--gold);border-color:var(--gold);
+    color:var(--green-dark);
 }
-.foot-col h4{
-    font-size:10px;
-    letter-spacing:4px;
+.footer-col h4{
+    font-size:10.5px;
+    letter-spacing:3px;
     text-transform:uppercase;
-    color:rgba(255,255,255,.35);
+    color:var(--gold-light);
     margin-bottom:18px;
-    font-weight:600;
+    font-weight:500;
 }
-.foot-col ul{
+.footer-col ul{
     list-style:none;
     display:flex;
     flex-direction:column;
     gap:9px;
 }
-.foot-col ul li a{
-    font-size:13px;color:rgba(255,255,255,.35);
+.footer-col ul li a{
+    font-size:12.5px;
+    color:rgba(255,255,255,.45);
     text-decoration:none;
     transition:color .3s;
-    cursor:pointer;
 }
-.foot-col ul li a:hover{
-    color:var(--g3);
+.footer-col ul li a:hover{
+    color:#fff;
 }
-.foot-bottom{
-    border-top:1px solid rgba(255,255,255,.06);
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.07);
     padding-top:22px;
     display:flex;
+    align-items:center;
     justify-content:space-between;
     flex-wrap:wrap;
     gap:10px;
 }
-.foot-bottom p{
-    font-size:12px;
-    color:rgba(255,255,255,.2);
+.footer-bottom p{
+    font-size:11.5px;
+    color:rgba(255,255,255,.3);
 }
-
-
 
 .reveal{
     opacity:0;
@@ -764,7 +767,9 @@ footer::before{
     <div class="nav-logo">
         <img src="images/logo.jpeg" class="logo">
     </div>
-    <div class="brand-text"><span class="t1">Next Step</span><span class="t2">Career Guidance Initiative</span></div>
+    <div class="brand-text">
+        <span class="t1">Next Step</span><span class="t2">Career Guidance Initiative</span>
+    </div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -900,77 +905,90 @@ footer::before{
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="foot-grid">
-    <div class="foot-brand">
-      <div class="nav-brand"><div class="brand-mark">
-        <img src="images/logo.jpeg" class="logo">
-    </div><div class="brand-text"><span class="t1">Next Step</span><span class="t2">Career Guidance Initiative</span></div></div>
-      <p>Professionals united to guide the next generation of students in the Lango sub-region toward purposeful, fulfilling futures.</p>
-      <div class="foot-socials">
-        <div class="fsoc">
+  <div class="footer-grid">
+    <div class="footer-brand">
+        <div class="footer-logo">
+      <img src="images/logo.jpeg" class="logo">
+
+      <div class="brand-text"><span class="t1">Next Step</span><span class="t2">Career Guidance Initiative</span></div></div>
+      <p>Empowering students in the Lango sub-region to make informed career choices.</p>
+            <div class="footer-socials">
+                <div class="footer-social-btn">
             <a href="#" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
             </a>
         </div>
-        <div class="fsoc">
+        <div class="footer-social-btn">
             <a href="https://x.com/nextstep624" target="_blank">
             <i class="fab fa-x-twitter"></i>
             </a>
         </div>
-        <div class="fsoc">
+        <div class="footer-social-btn">
             <a href="#" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
             </a>
         </div>
-        <div class="fsoc">
+        <div class="footer-social-btn">
             <a href="#" aria-label="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
-      </div>
+            </div>
+        </div>
+    <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+            <li><a href="nextstep-home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="nextstep-leadership.html">Leadership</a></li>
+            <li><a href="nextstep-conduct.html">Conduct</a></li>
+        </ul>
     </div>
-    <div class="foot-col"><h4>Navigate</h4><ul><li><a href="nextstep-pro.html">Home</a></li><li><a href="nextstep-pro.html">About</a></li><li><a href="#">Leadership</a></li><li><a href="nextstep-pro.html">Conduct</a></li></ul></div>
-    <div class="foot-col">
+    <div class="footer-col">
         <h4>Services</h4>
         <ul>
-            <li>
-                <a>School Visits</a>
-            </li>
-            <li>
-                <a>Career Counseling</a>
-            </li><li><a>Workshops</a>
-            </li>
-            <li>
-                <a>Mentorship</a>
-            </li>
+            <li><a>School Visits</a></li>
+            <li><a>Career Counseling</a></li>
+            <li><a>Workshops</a></li>
+            <li><a>Mentorship</a></li>
         </ul>
     </div>
-    <div class="foot-col">
+    <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-            <li><a>
-                <i class="fas fa-map-marker-alt"></i>
-                Lango Sub-Region, Uganda
+      <li>
+        <a>
+            <i class="fas fa-map-marker-alt"></i>
+             Lango Sub-Region, Uganda
             </a>
         </li>
-            <li>
-                <a>
-                    <i class="fas fa-phone"></i>  
-                    +256 783 471 624
-                </a>
-            </li>
-            <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:nextstepcareerguidanceinitiati@gmail.com" class="__cf_email__" data-cfemail="debfbcabacbfbbb3b3bfe7e89eb9b3bfb7b2f0bdb1b3">nextstepcareerguidanceinitiati@gmail.com</a>
-            </li>
-        </ul>
+      <li>
+        <a>
+            <i class="fas fa-phone"></i> 
+            +256 783 471 624
+        </a>
+    </li>
+      <li>
+        <a href="mailto:nextstepcareerguidanceinitiati@gmail.com">
+   <i class="fas fa-envelope"></i>
+   nextstepcareerguidanceinitiati@gmail.com
+</a>
+    </li>
+    <li>
+        <a>
+            <i class="fas fa-user"></i> 
+            Abura Emmanuel Gerald
+        </a>
+    </li>
+    </ul>
     </div>
   </div>
-  <div class="foot-bottom"><p>© 2025 Next Step Career Guidance & Counseling Services Initiative.</p><p>Privacy · Terms</p></div>
+  <div class="footer-bottom">
+    <p>© 2025 Next Step Career Guidance & Counseling Initiative.</p>
+    <p>Privacy Policy · Terms of Service</p>
+</div>
 </footer>
-
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.addEventListener('scroll', () =>
